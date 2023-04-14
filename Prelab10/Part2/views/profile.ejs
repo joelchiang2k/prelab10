@@ -1,0 +1,32 @@
+<!-- views/profile.ejs -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Profile Page</title>
+</head>
+<body>
+	<h1>Welcome to your profile, <%= user.username %>!</h1>
+	<hr>
+
+	<!-- Add Create Post button to top right -->
+	<div style="text-align: right;">
+        <form action="/<%= hashed_id %>/create" method="get">
+          <button>Create post</button>
+        </form>
+    </div>
+    
+      
+
+	<!-- Display user's posts in reverse chronological order -->
+	<% posts.forEach(function(post) { %>
+		<h3><%= post.title %></h3>
+        <form action="/<%= hashed_id %>/posts/<%= post.post_id %>" method="get">
+            <button>View</button>
+        </form>
+		<p>Created on <%= post.timestamp %></p>
+		<hr>
+	<% }); %>
+
+</body>
+</html>

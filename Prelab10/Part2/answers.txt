@@ -1,0 +1,24 @@
+Name of buckets:
+artifacts.ece39595.appspot.com
+ece39595_cloudbuild
+
+URL:https://prelab10-l2j65srhpa-uk.a.run.app
+
+Advantages of Containers over Virtual Machines:
+
+1. Resource Efficiency: Containers consume fewer resources than virtual machines, leading to better resource 
+                        utilization and lower infrastructure costs.
+2. Faster Startup Time: Containers can be started up and shut down much more quickly than virtual machines, 
+                        leading to improved agility and responsiveness.
+
+Disadvantages of Containers over Virtual Machines:
+
+1. Security Concerns: Containers share the host operating system kernel, potentially exposing all containers to vulnerabilities.
+2. Limited Isolation: Containers share some resources with the host system and other containers, which can lead to compatibility issues and 
+                      difficulty enforcing strict resource limits or network isolation.
+
+
+FROM: Specifies the base image for the Dockerfile.
+RUN: Executes a command during the build process to install dependencies, configure settings, or perform other tasks.
+COPY: Copies files and directories from the host machine into the container.
+WORKDIR: Sets the working directory for subsequent instructions in the Dockerfile.
